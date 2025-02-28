@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Share</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>File Sharing App</h1>
+    <div class="tabs">
+        <button id="shareTab" class="active" onclick="showTab('share')">Share</button>
+        <button id="viewTab" onclick="showTab('view')">View</button>
+    </div>
+    <div id="share" class="tab-content">
+        <h2>Share a File</h2>
+        <input type="file" id="fileInput" />
+        <button onclick="shareFile()">Upload and Share</button>
+        <div id="shareResult"></div>
+    </div>
+    <div id="view" class="tab-content hidden">
+        <h2>View a File</h2>
+        <input type="text" id="tokenInput" placeholder="Enter token here" />
+        <button onclick="viewFile()">View File</button>
+        <div id="viewResult"></div>
+    </div>
+    <script src="../static/index.js"></script>
+</body>
+</html>
